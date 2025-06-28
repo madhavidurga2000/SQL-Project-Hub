@@ -1,0 +1,9 @@
+USE exam_db;
+
+CREATE TABLE IF NOT EXISTS Results (
+    ResultID INT AUTO_INCREMENT PRIMARY KEY,
+    ExamID INT NOT NULL,
+    StudentID INT NOT NULL,
+    MarksObtained INT NOT NULL,
+    FOREIGN KEY (ExamID) REFERENCES Exams(ExamID)
+);
