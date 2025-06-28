@@ -1,0 +1,9 @@
+USE library_db;
+
+CREATE TABLE IF NOT EXISTS Fine_Records (
+    FineID INT AUTO_INCREMENT PRIMARY KEY,
+    IssueID INT NOT NULL,
+    FineAmount DECIMAL(5,2),
+    Paid BOOLEAN DEFAULT FALSE,
+    FOREIGN KEY (IssueID) REFERENCES Issue_Log(IssueID)
+);

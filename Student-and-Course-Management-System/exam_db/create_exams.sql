@@ -1,0 +1,8 @@
+USE exam_db;
+
+CREATE TABLE IF NOT EXISTS Exams (
+    ExamID INT AUTO_INCREMENT PRIMARY KEY,
+    CourseID INT NOT NULL,
+    ExamDate DATE NOT NULL,
+    TotalMarks INT NOT NULL
+);
